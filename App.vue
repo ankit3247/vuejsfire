@@ -23,8 +23,14 @@ export default {
   mounted() {
     console.log(process.env.VUE_APP_ROOT_URL);
   },
+  beforeCreate() {
+     console.log(process.env.VUE_APP_ROOT_API_KEY);
+  },
   created() {
     console.log(process.env.VUE_APP_ROOT_API_KEY);
+  },
+  unmounted() {
+    console.log(process.env.VUE_APP_ROOT_PROJECT_ID);
   },
 
   components: {
